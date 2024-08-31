@@ -37,6 +37,7 @@ class Order(HashModel):
 
     class Meta:
         database = redis
+        model_key_prefix = "order"
 
 def format_order(pk: str):
     order = Order.get(pk)
