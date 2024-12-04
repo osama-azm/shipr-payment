@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Images') {
             steps {
                 sh '''
-                curl -L "https://github.com/docker/compose/releases/download/2.24.0/docker-compose-Linux-x86_64" -o ./docker-compose
+                curl -L "https://github.com/docker/compose/releases/download/v2.30.3/docker-compose-linux-x86_64" -o ./docker-compose
                 chmod +x ./docker-compose
                 ./docker-compose --version
                 docker-compose build
